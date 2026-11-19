@@ -1,7 +1,8 @@
 ﻿---
+sidebar_position: 1
 title: Human Resources
 ---
 
 # Human Resources
 
-HR module documentation. Employee and payroll guides are available from the sidebar. This is a starter page — content will expand over time.
+Go to [Human Resources introduction](/docs/hrm/introduction).

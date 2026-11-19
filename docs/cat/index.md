@@ -1,8 +1,8 @@
 ﻿---
-title: Catalogue
+sidebar_position: 0
+title: كتالوج المنتجات
 ---
 
-# Catalogue
+# كتالوج المنتجات
 
-Product Catalogue documentation.
-
+انتقل إلى [مقدمة كتالوج المنتجات](/docs/cat/introduction).

@@ -1,8 +1,7 @@
-﻿---
-title: HSP
+---
+title: Hospitality Management (HSP)
 ---
 
-# HSP
+# Hospitality Management (HSP)
 
-Module documentation landing page for **HSP**.
-
+Module documentation landing page for **Hospitality and Facility Operations (HSP)**.

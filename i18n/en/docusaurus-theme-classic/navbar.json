@@ -3,9 +3,25 @@
     "message": "Docs",
     "description": "Navbar item with label التوثيق"
   },
+  "item.label.البداية": {
+    "message": "Getting started",
+    "description": "Navbar item with label البداية"
+  },
   "item.label.مكتب إدارة المشاريع": {
     "message": "PMO",
     "description": "Navbar item with label مكتب إدارة المشاريع"
+  },
+  "item.label.الموارد البشرية": {
+    "message": "HR",
+    "description": "Navbar item with label الموارد البشرية"
+  },
+  "item.label.المالية": {
+    "message": "Finance",
+    "description": "Navbar item with label المالية"
+  },
+  "item.label.فتح التطبيق": {
+    "message": "Open app",
+    "description": "Navbar item with label فتح التطبيق"
   },
   "item.label.Docs": {
     "message": "Docs",
@@ -14,5 +30,9 @@
   "item.label.PMO": {
     "message": "PMO",
     "description": "Navbar item with label PMO"
+  },
+  "logo.alt": {
+    "message": "Drixal ERP",
+    "description": "The alt text of navbar logo"
   }
 }

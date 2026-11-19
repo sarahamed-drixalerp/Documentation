@@ -7,7 +7,7 @@
     "start": "docusaurus start --port 3001 --host 127.0.0.1",
     "start:ar": "docusaurus start --port 3001 --host 127.0.0.1 --locale ar",
     "start:en": "docusaurus start --port 3001 --host 127.0.0.1 --locale en",
-    "build": "docusaurus build",
+    "build": "docusaurus build && node -e \"const fs=require('fs'); try{fs.copyFileSync('build/docs/index.html','build/docs.html');fs.copyFileSync('build/en/docs/index.html','build/en/docs.html');}catch(e){console.error(e)}\"",
     "serve": "docusaurus serve --port 3001 --host 127.0.0.1",
     "serve:i18n": "npm run build && npm run serve",
     "i18n": "npm run serve:i18n",

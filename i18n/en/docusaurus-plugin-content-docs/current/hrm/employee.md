@@ -1,7 +1,8 @@
 ﻿---
-title: Employees
+sidebar_position: 99
+title: Employees (redirect)
 ---
 
 # Employees
 
-Help for the Employee entity in the system.
+Go to [Employee overview](/docs/hrm/employee-overview).

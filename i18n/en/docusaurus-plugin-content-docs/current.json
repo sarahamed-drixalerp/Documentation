@@ -5,46 +5,90 @@
   },
   "sidebar.docsSidebar.category.البداية": {
     "message": "Getting started",
-    "description": "The label for category البداية in sidebar docsSidebar"
+    "description": "The label for category 'البداية' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.مكتب إدارة المشاريع": {
-    "message": "Project Management Office",
-    "description": "The label for category مكتب إدارة المشاريع in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.مساحة العمل": {
+    "message": "WORKSPACE",
+    "description": "The label for category 'مساحة العمل' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.العمليات التجارية": {
+    "message": "BUSINESS OPERATIONS",
+    "description": "The label for category 'العمليات التجارية' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.الإدارة": {
+    "message": "Administration",
+    "description": "The label for category 'الإدارة' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.المؤسسة": {
+    "message": "Organization",
+    "description": "The label for category 'المؤسسة' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.الموارد البشرية": {
     "message": "Human Resources",
-    "description": "The label for category الموارد البشرية in sidebar docsSidebar"
+    "description": "The label for category 'الموارد البشرية' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.التتبع الجغرافي": {
+    "message": "GPS",
+    "description": "The label for category 'التتبع الجغرافي' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.كتالوج المنتجات": {
+    "message": "Product Catalogue",
+    "description": "The label for category 'كتالوج المنتجات' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.إدارة الوثائق": {
+    "message": "DMS",
+    "description": "The label for category 'إدارة الوثائق' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.المبيعات وعلاقات العملاء": {
     "message": "CRM & Sales",
-    "description": "The label for category المبيعات وعلاقات العملاء in sidebar docsSidebar"
+    "description": "The label for category 'المبيعات وعلاقات العملاء' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.المشتريات": {
-    "message": "Procurement",
-    "description": "The label for category المشتريات in sidebar docsSidebar"
+    "message": "SRM & Procurement",
+    "description": "The label for category 'المشتريات' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.مكتب إدارة المشاريع": {
+    "message": "PMO",
+    "description": "The label for category 'مكتب إدارة المشاريع' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.المالية": {
     "message": "Finance",
-    "description": "The label for category المالية in sidebar docsSidebar"
+    "description": "The label for category 'المالية' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.إدارة الوثائق": {
-    "message": "Document Management",
-    "description": "The label for category إدارة الوثائق in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.دليل الخدمات": {
+    "message": "Services Catalogue",
+    "description": "The label for category 'دليل الخدمات' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.كتالوج المنتجات": {
-    "message": "Product catalogue",
-    "description": "The label for category كتالوج المنتجات in sidebar docsSidebar"
-  },
-  "sidebar.docsSidebar.category.المؤسسة والإدارة": {
-    "message": "Organization & Admin",
-    "description": "The label for category المؤسسة والإدارة in sidebar docsSidebar"
+  "sidebar.docsSidebar.category.اتفاقيات مستوى الخدمة": {
+    "message": "Service Level Agreements",
+    "description": "The label for category 'اتفاقيات مستوى الخدمة' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.تطبيقاتي": {
     "message": "My apps",
-    "description": "The label for category تطبيقاتي in sidebar docsSidebar"
+    "description": "The label for category 'تطبيقاتي' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.وحدات أخرى": {
     "message": "Other modules",
-    "description": "The label for category وحدات أخرى in sidebar docsSidebar"
+    "description": "The label for category 'وحدات أخرى' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.الموظفون": {
+    "message": "Employees",
+    "description": "The label for category 'الموظفون' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.مسيرات الرواتب": {
+    "message": "Payroll",
+    "description": "The label for category 'مسيرات الرواتب' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.التوظيف": {
+    "message": "Recruitment",
+    "description": "The label for category 'التوظيف' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.التقييم": {
+    "message": "Performance & Evaluation",
+    "description": "The label for category 'التقييم' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.البيانات الأساسية": {
+    "message": "Master Data",
+    "description": "The label for category 'البيانات الأساسية' in sidebar 'docsSidebar'"
   }
 }

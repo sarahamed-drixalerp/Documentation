@@ -1,8 +1,7 @@
-﻿---
-title: SCL
+---
+title: School Management (SCL)
 ---
 
-# SCL
+# School Management (SCL)
 
-Module documentation landing page for **SCL**.
-
+Module documentation landing page for **School and Academic Institutions Management (SCL)**.

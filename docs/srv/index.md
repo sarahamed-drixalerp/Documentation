@@ -1,8 +1,8 @@
-﻿---
-title: Services
+---
+sidebar_position: 0
+title: دليل الخدمات
 ---
 
-# Services
+# دليل الخدمات
 
-Services module documentation.
-
+انتقل إلى [مقدمة دليل الخدمات](/docs/srv/introduction).

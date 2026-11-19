@@ -1,8 +1,8 @@
 ﻿---
+sidebar_position: 1
 title: GPS
 ---
 
 # GPS
 
-GPS module documentation.
-
+Go to [GPS introduction](/docs/gps/introduction).

@@ -1,7 +1,8 @@
 ﻿---
+sidebar_position: 0
 title: Document Management
 ---
 
 # Document Management
 
-Document management module documentation.
+Go to the [Document Management introduction](/docs/dms/introduction).

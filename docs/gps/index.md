@@ -1,8 +1,8 @@
 ﻿---
-title: GPS
+sidebar_position: 1
+title: التتبع الجغرافي
 ---
 
-# GPS
+# التتبع الجغرافي
 
-GPS module documentation.
-
+انتقل إلى [مقدمة التتبع الجغرافي](/docs/gps/introduction).

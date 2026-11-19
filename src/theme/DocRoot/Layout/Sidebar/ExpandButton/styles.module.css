@@ -1,35 +1,98 @@
 @media (min-width: 997px) {
   .expandButton {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 1rem;
-    transition: background-color var(--ifm-transition-fast) ease;
-    background-color: var(--dx-surface, #fff);
-    border-inline-end: 1px solid var(--dx-border, #e2e8f0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.85rem 0.4rem;
+    gap: 0.85rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 0;
     cursor: pointer;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .expandButton::after {
+    content: '';
+    position: absolute;
+    inset-block: 18% 18%;
+    inset-inline-end: 0;
+    width: 2px;
+    border-radius: 2px;
+    background: transparent;
+    transition: background-color 0.18s ease;
   }
 
   .expandButton:hover,
   .expandButton:focus {
-    background-color: var(--dx-accent-soft-2, rgba(79, 110, 247, 0.08));
+    background: #ffffff;
+    outline: none;
+    box-shadow: inset 0 0 0 1px #eef2f7;
+  }
+
+  .expandButton:hover::after,
+  .expandButton:focus::after {
+    background: var(--dx-accent, #4f6ef7);
   }
 
   .expandLogo {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
     display: block;
-    border-radius: 8px;
+    border-radius: 10px;
+    padding: 3px;
+    background: #ffffff;
+    border: 1px solid var(--dx-border, #e2e8f0);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+
+  .expandButton:hover .expandLogo {
+    transform: scale(1.04);
+    border-color: color-mix(in srgb, var(--dx-accent, #4f6ef7) 30%, #e2e8f0);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  }
+
+  .expandIconBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #64748b;
+    border: 1px solid var(--dx-border, #e2e8f0);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: all 0.18s ease;
+  }
+
+  .expandButton:hover .expandIconBadge {
+    background: var(--dx-accent, #4f6ef7);
+    color: #ffffff;
+    border-color: var(--dx-accent, #4f6ef7);
+    box-shadow: 0 6px 14px rgba(79, 110, 247, 0.28);
+    transform: translateX(1px);
+  }
+
+  [dir='rtl'] .expandIconBadge svg {
+    transform: scaleX(-1);
+  }
+
+  [dir='rtl'] .expandButton:hover .expandIconBadge {
+    transform: translateX(-1px);
   }
 
   [dir='rtl'] .expandButton {
     right: auto;
     left: 0;
+  }
+
+  [dir='rtl'] .expandButton::after {
+    inset-inline-end: auto;
+    inset-inline-start: 0;
   }
 }

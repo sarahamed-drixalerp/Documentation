@@ -1,8 +1,8 @@
 ﻿---
-title: SLA
+sidebar_position: 0
+title: Service Level Agreements
 ---
 
-# SLA
+# Service Level Agreements
 
-SLA module documentation.
-
+Go to [SLA introduction](/docs/sla/introduction).

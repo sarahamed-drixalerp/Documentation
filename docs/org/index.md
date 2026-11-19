@@ -1,8 +1,8 @@
-﻿---
-title: Organization
+---
+sidebar_position: 1
+title: المؤسسة
 ---
 
-# Organization
+# المؤسسة
 
-Organization module documentation.
-
+انتقل إلى [مقدمة المؤسسة](/docs/org/introduction).

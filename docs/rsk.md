@@ -1,8 +1,7 @@
 ﻿---
-title: RSK
+title: إدارة المخاطر (RSK)
 ---
 
-# RSK
+# إدارة المخاطر (RSK)
 
-Module documentation landing page for **RSK**.
-
+دليل التوثيق لوحدة تقييم المخاطر وتحديد مصفوفات الأثر والاحتمالية وخطط المعالجة.

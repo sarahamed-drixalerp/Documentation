@@ -1,8 +1,7 @@
-﻿---
-title: HSP
+---
+title: إدارة الضيافة (HSP)
 ---
 
-# HSP
+# إدارة الضيافة والمستشفيات (HSP)
 
-Module documentation landing page for **HSP**.
-
+دليل التوثيق لوحدة إدارة خدمات الضيافة والمنشآت المتخصصة في Drixal ERP.

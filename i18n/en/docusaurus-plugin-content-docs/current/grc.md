@@ -1,8 +1,7 @@
-﻿---
-title: GRC
+---
+title: Governance & Compliance (GRC)
 ---
 
-# GRC
+# Governance & Compliance (GRC)
 
-Module documentation landing page for **GRC**.
-
+Module documentation landing page for **Governance, Risk, and Compliance (GRC)**.

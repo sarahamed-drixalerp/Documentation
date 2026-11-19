@@ -1,8 +1,8 @@
 ﻿---
-title: Administration
+sidebar_position: 1
+title: الإدارة
 ---
 
-# Administration
+# الإدارة
 
-Administration documentation.
-
+انتقل إلى [مقدمة الإدارة](/docs/adm/introduction).

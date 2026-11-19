@@ -1,7 +1,8 @@
 ﻿---
-title: Procurement
+sidebar_position: 0
+title: SRM & Procurement
 ---
 
-# Procurement
+# SRM & Procurement
 
-Procurement and supplier module documentation.
+Go to the [SRM & Procurement introduction](/docs/srm/introduction).

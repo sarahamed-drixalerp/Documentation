@@ -1,7 +1,8 @@
 ﻿---
-title: Sales & CRM
+sidebar_position: 0
+title: Sales and CRM
 ---
 
-# Sales & CRM
+# Sales and CRM
 
-CRM and sales module documentation.
+Go to the [CRM & Sales introduction](/docs/crm/introduction).

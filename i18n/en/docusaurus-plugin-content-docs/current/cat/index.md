@@ -1,8 +1,8 @@
 ﻿---
-title: Catalogue
+sidebar_position: 0
+title: Product Catalogue
 ---
 
-# Catalogue
+# Product Catalogue
 
-Product Catalogue documentation.
-
+Go to the [Product Catalogue introduction](/docs/cat/introduction).

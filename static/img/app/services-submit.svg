@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#F3F4F6"/>
+  <rect x="24" y="24" width="912" height="492" rx="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="480" y="250" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#374151">Screenshot placeholder</text>
+  <text x="480" y="300" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#6B7280">services-submit</text>
+  <text x="480" y="340" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#9CA3AF">Replace with UI capture from Aspire-Frontend</text>
+</svg>

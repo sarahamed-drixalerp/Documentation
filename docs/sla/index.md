@@ -1,8 +1,8 @@
-﻿---
-title: SLA
+---
+sidebar_position: 0
+title: اتفاقيات مستوى الخدمة
 ---
 
-# SLA
+# اتفاقيات مستوى الخدمة
 
-SLA module documentation.
-
+انتقل إلى [مقدمة اتفاقيات مستوى الخدمة](/docs/sla/introduction).

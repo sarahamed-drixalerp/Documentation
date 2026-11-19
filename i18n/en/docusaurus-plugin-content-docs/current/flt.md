@@ -1,8 +1,7 @@
-﻿---
-title: FLT
+---
+title: Fleet Management (FLT)
 ---
 
-# FLT
+# Fleet Management (FLT)
 
-Module documentation landing page for **FLT**.
-
+Module documentation landing page for **Fleet Management (FLT)**, vehicle tracking, maintenance, and fuel management.

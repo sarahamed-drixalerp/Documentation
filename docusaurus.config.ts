@@ -100,8 +100,8 @@ const config: Config = {
         alt: 'Drixal ERP',
         src: 'img/logo.png',
         href: '/',
-        width: 140,
-        height: 44,
+        width: 128,
+        height: 36,
       },
       items: [
         {
@@ -109,11 +109,6 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'التوثيق',
-        },
-        {
-          to: '/docs/pmo/introduction',
-          label: 'مكتب إدارة المشاريع',
-          position: 'left',
         },
         {
           type: 'search',
@@ -127,26 +122,8 @@ const config: Config = {
     },
     footer: {
       style: 'light',
-      links: [
-        {
-          title: 'التوثيق',
-          items: [
-            {label: 'البداية', to: '/docs/getting-started/introduction'},
-            {label: 'مكتب إدارة المشاريع', to: '/docs/pmo/introduction'},
-            {label: 'المشروع', to: '/docs/pmo/project-overview'},
-            {label: 'الموارد البشرية', to: '/docs/hrm/'},
-            {label: 'المالية', to: '/docs/fin/'},
-          ],
-        },
-        {
-          title: 'المنتج',
-          items: [
-            {label: 'موقع Drixal', href: 'https://drixalerp.com'},
-            {label: 'طلب عرض توضيحي', href: 'https://drixalerp.com'},
-          ],
-        },
-      ],
-      copyright: `© ${new Date().getFullYear()} Drixal ERP`,
+      links: [],
+      copyright: ' ',
     },
     prism: {
       theme: prismThemes.github,

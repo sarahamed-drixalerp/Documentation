@@ -1,8 +1,8 @@
 ﻿---
-title: Services
+sidebar_position: 0
+title: Services Catalogue
 ---
 
-# Services
+# Services Catalogue
 
-Services module documentation.
-
+Go to [Services Catalogue introduction](/docs/srv/introduction).

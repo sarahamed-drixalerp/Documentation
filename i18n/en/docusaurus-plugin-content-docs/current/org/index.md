@@ -1,8 +1,8 @@
 ﻿---
+sidebar_position: 1
 title: Organization
 ---
 
 # Organization
 
-Organization module documentation.
-
+Go to [Organization introduction](/docs/org/introduction).

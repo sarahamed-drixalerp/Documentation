@@ -1,8 +1,7 @@
-﻿---
-title: FMS
+---
+title: Facility Management (FMS)
 ---
 
-# FMS
+# Facility Management (FMS)
 
-Module documentation landing page for **FMS**.
-
+Module documentation landing page for **Facility Management (FMS)**, facilities, maintenance requests, and assets.

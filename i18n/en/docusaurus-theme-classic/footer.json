@@ -1,39 +1,43 @@
 {
   "link.title.التوثيق": {
     "message": "Documentation",
-    "description": "The title of the footer links column with title التوثيق"
+    "description": "The title of the footer links column with title=التوثيق in the footer"
   },
   "link.title.المنتج": {
     "message": "Product",
-    "description": "The title of the footer links column with title المنتج"
+    "description": "The title of the footer links column with title=المنتج in the footer"
   },
   "link.item.label.البداية": {
     "message": "Getting started",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=البداية linking to /docs/getting-started/introduction"
   },
   "link.item.label.مكتب إدارة المشاريع": {
     "message": "Project Management Office",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=مكتب إدارة المشاريع linking to /docs/pmo/introduction"
   },
   "link.item.label.المشروع": {
     "message": "Project",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=المشروع linking to /docs/pmo/project-overview"
+  },
+  "link.item.label.المشتريات": {
+    "message": "Procurement",
+    "description": "The label of footer link with label=المشتريات linking to /docs/srm/"
   },
   "link.item.label.الموارد البشرية": {
     "message": "Human Resources",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=الموارد البشرية linking to /docs/hrm/"
   },
   "link.item.label.المالية": {
     "message": "Finance",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=المالية linking to /docs/fin/"
   },
   "link.item.label.موقع Drixal": {
     "message": "Drixal website",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=موقع Drixal linking to https://drixalerp.com"
   },
   "link.item.label.طلب عرض توضيحي": {
     "message": "Request a demo",
-    "description": "The footer link label"
+    "description": "The label of footer link with label=طلب عرض توضيحي linking to https://drixalerp.com"
   },
   "copyright": {
     "message": "Copyright © Drixal ERP. All rights reserved.",

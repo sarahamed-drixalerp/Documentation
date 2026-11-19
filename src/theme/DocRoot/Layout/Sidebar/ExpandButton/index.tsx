@@ -1,13 +1,13 @@
-import React, {type ReactNode} from 'react';
-import {translate} from '@docusaurus/Translate';
+import React, { type ReactNode } from 'react';
+import { translate } from '@docusaurus/Translate';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import type {Props} from '@theme/DocRoot/Layout/Sidebar/ExpandButton';
+import type { Props } from '@theme/DocRoot/Layout/Sidebar/ExpandButton';
 
 import styles from './styles.module.css';
 
 /**
- * Collapsed-sidebar affordance — matches Aspire app: show smalllogo when the
- * docs sidebar is hidden, click to expand.
+ * Collapsed-sidebar affordance: show smalllogo and an expand icon badge
+ * when the docs sidebar is hidden, click to expand.
  */
 export default function DocRootLayoutSidebarExpandButton({
   toggleSidebar,
@@ -37,10 +37,24 @@ export default function DocRootLayoutSidebarExpandButton({
         className={styles.expandLogo}
         src={smallLogo}
         alt=""
-        width={36}
-        height={36}
+        width={34}
+        height={34}
         decoding="async"
       />
+      <div className={styles.expandIconBadge}>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </div>
     </div>
   );
 }
