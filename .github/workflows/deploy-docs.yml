@@ -1,0 +1,100 @@
+name: Deploy docs
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-docs
+  cancel-in-progress: true
+
+env:
+  CI: "true"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: SSH port
+        id: ssh
+        env:
+          SERVER_SSH_PORT: ${{ secrets.SERVER_SSH_PORT }}
+        run: echo "port=${SERVER_SSH_PORT:-22}" >> "$GITHUB_OUTPUT"
+
+      - name: Version
+        id: version
+        run: echo "value=docs.$(date -u +%Y%m%d).${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        timeout-minutes: 5
+        run: npm ci
+
+      - name: Build (all locales)
+        timeout-minutes: 12
+        env:
+          NODE_OPTIONS: "--max-old-space-size=6144"
+        run: npm run build
+
+      - name: Deployment record
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+          ENGINEER: ${{ github.event.pusher.name }}
+          ENGINEER_LOGIN: ${{ github.actor }}
+          COMMIT_SHA: ${{ github.sha }}
+          COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 deploy/write-deployment-json.py build/deployment.json
+
+      - name: Stage and compress release
+        run: |
+          mkdir -p docs-release
+          cp -a build docs-release/public
+          cp deploy/deploy-docs.sh docs-release/deploy-docs.sh
+          tar -czf release.tar.gz -C docs-release .
+
+      - name: Upload release
+        timeout-minutes: 3
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ steps.ssh.outputs.port }}
+          timeout: 60s
+          command_timeout: 3m
+          source: "release.tar.gz"
+          target: "/tmp/drixal-docs/${{ steps.version.outputs.value }}"
+          overwrite: true
+
+      - name: Deploy on server
+        timeout-minutes: 5
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+          SITE_NAME: ${{ vars.DOCS_SITE_NAME || 'docs.drixalerp.com' }}
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ steps.ssh.outputs.port }}
+          timeout: 60s
+          command_timeout: 5m
+          script_stop: true
+          envs: VERSION,SITE_NAME
+          script: |
+            cd "/tmp/drixal-docs/$VERSION"
+            tar -xzf release.tar.gz
+            rm -f release.tar.gz
+            bash "/tmp/drixal-docs/$VERSION/deploy-docs.sh"

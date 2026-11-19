@@ -1,0 +1,18 @@
+{
+  "item.label.التوثيق": {
+    "message": "Docs",
+    "description": "Navbar item with label التوثيق"
+  },
+  "item.label.مكتب إدارة المشاريع": {
+    "message": "PMO",
+    "description": "Navbar item with label مكتب إدارة المشاريع"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.PMO": {
+    "message": "PMO",
+    "description": "Navbar item with label PMO"
+  }
+}

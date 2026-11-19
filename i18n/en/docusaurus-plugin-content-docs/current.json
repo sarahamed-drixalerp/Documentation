@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.البداية": {
+    "message": "Getting started",
+    "description": "The label for category البداية in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.مكتب إدارة المشاريع": {
+    "message": "Project Management Office",
+    "description": "The label for category مكتب إدارة المشاريع in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.الموارد البشرية": {
+    "message": "Human Resources",
+    "description": "The label for category الموارد البشرية in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.المبيعات وعلاقات العملاء": {
+    "message": "CRM & Sales",
+    "description": "The label for category المبيعات وعلاقات العملاء in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.المشتريات": {
+    "message": "Procurement",
+    "description": "The label for category المشتريات in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.المالية": {
+    "message": "Finance",
+    "description": "The label for category المالية in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.إدارة الوثائق": {
+    "message": "Document Management",
+    "description": "The label for category إدارة الوثائق in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.كتالوج المنتجات": {
+    "message": "Product catalogue",
+    "description": "The label for category كتالوج المنتجات in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.المؤسسة والإدارة": {
+    "message": "Organization & Admin",
+    "description": "The label for category المؤسسة والإدارة in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.تطبيقاتي": {
+    "message": "My apps",
+    "description": "The label for category تطبيقاتي in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.وحدات أخرى": {
+    "message": "Other modules",
+    "description": "The label for category وحدات أخرى in sidebar docsSidebar"
+  }
+}

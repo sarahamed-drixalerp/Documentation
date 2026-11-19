@@ -1,0 +1,42 @@
+{
+  "link.title.التوثيق": {
+    "message": "Documentation",
+    "description": "The title of the footer links column with title التوثيق"
+  },
+  "link.title.المنتج": {
+    "message": "Product",
+    "description": "The title of the footer links column with title المنتج"
+  },
+  "link.item.label.البداية": {
+    "message": "Getting started",
+    "description": "The footer link label"
+  },
+  "link.item.label.مكتب إدارة المشاريع": {
+    "message": "Project Management Office",
+    "description": "The footer link label"
+  },
+  "link.item.label.المشروع": {
+    "message": "Project",
+    "description": "The footer link label"
+  },
+  "link.item.label.الموارد البشرية": {
+    "message": "Human Resources",
+    "description": "The footer link label"
+  },
+  "link.item.label.المالية": {
+    "message": "Finance",
+    "description": "The footer link label"
+  },
+  "link.item.label.موقع Drixal": {
+    "message": "Drixal website",
+    "description": "The footer link label"
+  },
+  "link.item.label.طلب عرض توضيحي": {
+    "message": "Request a demo",
+    "description": "The footer link label"
+  },
+  "copyright": {
+    "message": "Copyright © Drixal ERP. All rights reserved.",
+    "description": "The footer copyright"
+  }
+}

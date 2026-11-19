@@ -1,0 +1,605 @@
+/* Drixal Docs — SaaS documentation shell (light-first, matches modern docs UI) */
+
+:root {
+  --dx-bg: #eef1f7;
+  --dx-surface: #ffffff;
+  --dx-ink: #0f172a;
+  --dx-muted: #64748b;
+  --dx-border: #e2e8f0;
+  --dx-accent: #4f6ef7;
+  --dx-accent-soft: rgba(79, 110, 247, 0.12);
+  --dx-accent-soft-2: rgba(79, 110, 247, 0.08);
+  --dx-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  --dx-radius: 18px;
+  --dx-radius-sm: 12px;
+
+  --ifm-color-primary: #4f6ef7;
+  --ifm-color-primary-dark: #3b5cf0;
+  --ifm-color-primary-darker: #2f51e8;
+  --ifm-color-primary-darkest: #1f3fc4;
+  --ifm-color-primary-light: #6a86ff;
+  --ifm-color-primary-lighter: #7c95ff;
+  --ifm-color-primary-lightest: #a3b4ff;
+  --ifm-code-font-size: 93%;
+  --ifm-font-family-base: 'Inter', 'Cairo', 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Inter', 'Cairo', 'Segoe UI', sans-serif;
+  --ifm-background-color: var(--dx-bg);
+  --ifm-background-surface-color: var(--dx-surface);
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.92);
+  --ifm-navbar-height: 64px;
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: #f8fafc;
+  --ifm-font-size-base: 16px;
+  --ifm-leading: 1.7;
+  --ifm-global-radius: 14px;
+  --ifm-heading-color: var(--dx-ink);
+  --ifm-color-content: #334155;
+  --ifm-menu-color: #475569;
+  --ifm-menu-color-active: var(--dx-accent);
+  --ifm-menu-color-background-active: var(--dx-accent-soft);
+  --ifm-menu-color-background-hover: var(--dx-accent-soft-2);
+  --ifm-toc-border-color: transparent;
+  --ifm-hr-background-color: var(--dx-border);
+  --ifm-code-background: #f1f5f9;
+  --ifm-pre-background: #f8fafc;
+  --doc-sidebar-width: 280px;
+  --docusaurus-highlighted-code-line-bg: rgba(79, 110, 247, 0.08);
+}
+
+html[dir='rtl'] {
+  --ifm-font-family-base: 'Cairo', 'Inter', 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Cairo', 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Light-only: dark attribute must look identical to light */
+html[data-theme='dark'] {
+  color-scheme: light;
+  --dx-bg: #eef1f7;
+  --dx-surface: #ffffff;
+  --dx-ink: #0f172a;
+  --dx-muted: #64748b;
+  --dx-border: #e2e8f0;
+  --dx-accent: #4f6ef7;
+  --dx-accent-soft: rgba(79, 110, 247, 0.12);
+  --dx-accent-soft-2: rgba(79, 110, 247, 0.08);
+  --dx-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  --ifm-background-color: var(--dx-bg);
+  --ifm-background-surface-color: var(--dx-surface);
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.92);
+  --ifm-footer-background-color: #f8fafc;
+  --ifm-color-content: #334155;
+  --ifm-menu-color: #475569;
+  --ifm-heading-color: var(--dx-ink);
+  --ifm-code-background: #f1f5f9;
+  --ifm-pre-background: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light !important;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 0% 0%, rgba(124, 149, 255, 0.18), transparent 55%),
+    radial-gradient(900px 420px at 100% 0%, rgba(167, 139, 250, 0.16), transparent 50%),
+    var(--dx-bg);
+  color: var(--ifm-color-content);
+}
+
+/* ─── Navbar ─────────────────────────────────────────────── */
+.navbar {
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--dx-border);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  padding-inline: 1.25rem;
+}
+
+.navbar__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar__brand {
+  margin-inline-end: 1rem;
+}
+
+.navbar__logo {
+  height: 44px;
+  margin: 0;
+}
+
+.navbar__logo img {
+  height: 44px !important;
+  width: auto !important;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.navbar__title {
+  /* Full logo asset already includes the wordmark */
+  display: none;
+}
+
+.navbar__item {
+  padding: 0.25rem 0.35rem;
+  font-weight: 600;
+}
+
+.navbar__link {
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem !important;
+  color: var(--dx-muted) !important;
+  font-size: 0.92rem;
+}
+
+.navbar__link--active,
+.navbar__link:hover {
+  background: var(--dx-accent-soft) !important;
+  color: var(--dx-accent) !important;
+}
+
+.navbar-version {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Locale dropdown — always visible & readable */
+.navbar__item.dropdown > .navbar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--dx-border);
+  background: var(--dx-surface);
+  color: var(--dx-ink) !important;
+  min-width: 7.5rem;
+  justify-content: center;
+}
+
+.navbar__item.dropdown > .navbar__link:hover,
+.navbar__item.dropdown.dropdown--show > .navbar__link {
+  border-color: var(--dx-accent);
+  background: var(--dx-accent-soft) !important;
+  color: var(--dx-accent) !important;
+}
+
+.dropdown__menu {
+  border-radius: 14px !important;
+  border: 1px solid var(--dx-border) !important;
+  box-shadow: var(--dx-shadow) !important;
+  padding: 0.4rem !important;
+  min-width: 10rem;
+}
+
+.dropdown__link {
+  border-radius: 10px !important;
+  font-weight: 600;
+  padding: 0.55rem 0.75rem !important;
+}
+
+.dropdown__link--active,
+.dropdown__link:hover {
+  background: var(--dx-accent-soft) !important;
+  color: var(--dx-accent) !important;
+}
+
+/* Search */
+.navbar__search-input,
+input[type='search'],
+.navbar .navbar__search > span {
+  border-radius: 999px !important;
+}
+
+.navbar__search-input {
+  width: 220px !important;
+  height: 38px !important;
+  border: 1px solid var(--dx-border) !important;
+  background: #f8fafc !important;
+  color: var(--dx-ink) !important;
+  font-size: 0.9rem !important;
+  padding-inline: 2.2rem 1rem !important;
+}
+
+.navbar__search-input:focus {
+  border-color: var(--dx-accent) !important;
+  box-shadow: 0 0 0 3px var(--dx-accent-soft) !important;
+  outline: none !important;
+}
+
+/* Color mode toggle hidden — site is light-only */
+.navbar .colorModeToggle_DEke,
+.navbar [class*='colorModeToggle'],
+.navbar button[title*='mode'],
+.navbar button[title*='Mode'],
+.navbar button[aria-label*='mode'],
+.navbar button[aria-label*='Mode'],
+.navbar button[class*='ColorMode'],
+.navbar button[class*='toggleButton'],
+button.toggleButton_gllP {
+  display: none !important;
+}
+
+/* ─── Main docs shell (card layout) ──────────────────────── */
+.main-wrapper {
+  padding: 1rem 1rem 2.5rem;
+}
+
+@media (min-width: 997px) {
+  .docs-wrapper .main-wrapper,
+  .main-wrapper {
+    padding: 0.65rem 1.25rem 2.5rem;
+  }
+
+  .docs-wrapper .container {
+    max-width: 1280px;
+  }
+
+  /* White rounded content stage */
+  .docs-doc-page .row,
+  main .container > .row {
+    background: var(--dx-surface);
+    border: 1px solid var(--dx-border);
+    border-radius: var(--dx-radius);
+    box-shadow: var(--dx-shadow);
+    overflow: hidden;
+    min-height: calc(100vh - 110px);
+  }
+
+  .theme-doc-sidebar-container {
+    border-inline-end: 1px solid var(--dx-border) !important;
+    margin: 0 !important;
+    clip-path: none !important;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 48%);
+  }
+
+  .theme-doc-sidebar-container > div {
+    border: 0 !important;
+  }
+
+  /* Kill Infima’s navbar-height offset — sidebar already sits under the navbar */
+  .theme-doc-sidebar-container [class*='sidebar_'] {
+    padding-top: 0 !important;
+  }
+}
+
+/* ─── Sidebar ────────────────────────────────────────────── */
+.theme-doc-sidebar-menu {
+  padding: 0.35rem 0.7rem 1.5rem !important;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+}
+
+.menu__list-item {
+  margin: 0.12rem 0 !important;
+}
+
+.menu__list-item-collapsible,
+.menu__link {
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.menu__list-item-collapsible {
+  padding-inline: 0.15rem;
+}
+
+.menu__link {
+  padding: 0.42rem 0.7rem !important;
+  line-height: 1.35;
+  color: #334155 !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.menu__link:hover {
+  background: var(--dx-accent-soft-2) !important;
+  color: var(--dx-accent) !important;
+}
+
+/* Top-level categories */
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link {
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #0f172a !important;
+  padding-block: 0.55rem !important;
+}
+
+.menu__list .menu__list {
+  padding-inline-start: 0.45rem;
+  margin: 0.1rem 0 0.35rem;
+  border-inline-start: 2px solid #e8eef7;
+}
+
+.menu__list .menu__list .menu__link {
+  font-size: 0.86rem;
+  font-weight: 550;
+  color: #475569 !important;
+}
+
+.menu__caret {
+  padding: 0 0.35rem !important;
+}
+
+.menu__caret:before,
+.menu__link--sublist-caret:after {
+  opacity: 0.45;
+  background-size: 1.15rem 1.15rem !important;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: var(--dx-accent-soft) !important;
+  color: var(--dx-accent) !important;
+  font-weight: 700 !important;
+  box-shadow: inset 3px 0 0 var(--dx-accent);
+}
+
+html[dir='rtl'] .menu__link--active:not(.menu__link--sublist) {
+  box-shadow: inset -3px 0 0 var(--dx-accent);
+}
+
+.menu__list-item-collapsible--active,
+.menu__list-item-collapsible:hover {
+  background: var(--dx-accent-soft-2);
+}
+
+/* ─── Article / content ──────────────────────────────────── */
+.theme-doc-markdown {
+  max-width: 760px;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 997px) {
+  main > .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  article {
+    padding: 1.1rem 1.75rem 2rem !important;
+  }
+
+  .theme-doc-toc-desktop {
+    padding: 0.75rem 0.85rem 1.25rem 0.45rem !important;
+  }
+
+  .theme-doc-toc-desktop .table-of-contents {
+    margin-top: 0;
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.breadcrumbs__link {
+  color: var(--dx-muted);
+  font-weight: 600;
+}
+
+.theme-doc-markdown {
+  --ifm-heading-vertical-rhythm-bottom: 1.15;
+  --ifm-h2-vertical-rhythm-top: 1.6;
+  --ifm-h3-vertical-rhythm-top: 1.25;
+  --ifm-leading: 1.75;
+  --ifm-list-margin: 1.15rem;
+  --ifm-list-left-padding: 1.35rem;
+}
+
+.markdown h1:first-child {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 2.1rem;
+  margin: 0 0 1rem !important;
+  border: 0;
+  padding: 0;
+  color: var(--dx-ink);
+}
+
+/* Use padding (not only margin) so space never collapses into lists/tables */
+.markdown > h2,
+.markdown h2 {
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-top: 2.5rem !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 1.65rem !important;
+  color: var(--dx-ink);
+}
+
+.markdown > h3,
+.markdown h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 1.85rem !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 1.25rem !important;
+  color: var(--dx-ink);
+}
+
+.markdown > h2 + ul,
+.markdown > h2 + ol,
+.markdown > h3 + ul,
+.markdown > h3 + ol,
+.markdown h2 + ul,
+.markdown h2 + ol,
+.markdown h3 + ul,
+.markdown h3 + ol {
+  margin-top: 0 !important;
+  margin-bottom: 1.35rem !important;
+  padding-top: 0.15rem !important;
+}
+
+.markdown > h2 + table,
+.markdown > h3 + table,
+.markdown h2 + table,
+.markdown h3 + table,
+.markdown table {
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  display: table;
+  width: 100%;
+}
+
+.markdown > h2 + p,
+.markdown > h3 + p,
+.markdown h2 + p,
+.markdown h3 + p {
+  margin-top: 0 !important;
+}
+
+.markdown ul,
+.markdown ol {
+  margin-bottom: 1.25rem;
+  padding-inline-start: 1.35rem;
+}
+
+.markdown li + li {
+  margin-top: 0.4rem;
+}
+
+.markdown p,
+.markdown li {
+  line-height: 1.75;
+}
+
+.markdown code {
+  border-radius: 8px;
+  border: 1px solid var(--dx-border);
+  background: var(--ifm-code-background);
+  padding: 0.15rem 0.4rem;
+}
+
+.theme-code-block {
+  border-radius: 14px !important;
+  border: 1px solid var(--dx-border);
+  box-shadow: none !important;
+  overflow: hidden;
+  margin-top: 0.75rem !important;
+  margin-bottom: 1.75rem !important;
+}
+
+.markdown .theme-code-block + table,
+.markdown .theme-code-block + p,
+.markdown pre + table,
+.markdown pre + p {
+  margin-top: 0.5rem !important;
+}
+
+.theme-admonition {
+  border-radius: 14px;
+  box-shadow: none;
+  border: 1px solid var(--dx-border);
+}
+
+.pagination-nav__link {
+  border-radius: 14px;
+  border: 1px solid var(--dx-border);
+  box-shadow: none;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--dx-accent);
+}
+
+/* ─── TOC (On this page) ─────────────────────────────────── */
+.table-of-contents {
+  font-size: 0.86rem;
+  padding: 0.75rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid var(--dx-border);
+}
+
+.table-of-contents__link {
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  display: block;
+  color: var(--dx-muted);
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link:hover {
+  background: var(--dx-accent-soft);
+  color: var(--dx-accent) !important;
+  font-weight: 700;
+}
+
+.theme-doc-toc-desktop > div > ul::before {
+  content: 'On this page';
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dx-muted);
+  margin: 0 0 0.65rem 0.35rem;
+}
+
+html[dir='rtl'] .theme-doc-toc-desktop > div > ul::before {
+  content: 'في هذه الصفحة';
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+.footer {
+  background: transparent !important;
+  border-top: 0;
+  padding-top: 1rem;
+}
+
+.footer .container {
+  background: var(--dx-surface);
+  border: 1px solid var(--dx-border);
+  border-radius: var(--dx-radius);
+  box-shadow: var(--dx-shadow);
+  padding: 2rem 1.75rem 1.5rem;
+  max-width: 1280px;
+}
+
+.footer__title {
+  color: var(--dx-ink);
+  font-weight: 800;
+}
+
+.footer__link-item {
+  color: var(--dx-muted);
+}
+
+.footer__copyright {
+  color: var(--dx-muted);
+  font-size: 0.85rem;
+}
+
+/* Homepage styles live in src/pages/index.module.css */
+
+/* RTL tweaks */
+html[dir='rtl'] .navbar__items--right {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .navbar__search-input {
+  text-align: right;
+}
+
+@media (max-width: 996px) {
+  .main-wrapper {
+    padding: 0.75rem;
+  }
+
+  .navbar__search-input {
+    width: 150px !important;
+  }
+}
