@@ -105,6 +105,7 @@ export default function Home(): ReactNode {
       <div className={styles.page}>
         {/* ── Hero ─────────────────────────────────────────── */}
         <header className={styles.hero}>
+          <span className={styles.heroGlow} aria-hidden="true" />
           <div className={styles.heroInner}>
             <p className={styles.eyebrow}>{copy.hero.eyebrow}</p>
             <Heading as="h1" className={styles.heroTitle}>
