@@ -83,7 +83,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         env:
           VERSION: ${{ steps.version.outputs.value }}
-          SITE_NAME: ${{ vars.DOCS_SITE_NAME || 'docs.drixalerp.com' }}
+          SITE_NAME: ${{ vars.DOCS_SITE_NAME || 'dev.docs.drixalerp.com' }}
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
