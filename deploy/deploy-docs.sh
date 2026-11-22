@@ -15,7 +15,7 @@ STAGING="/tmp/drixal-docs/${VERSION}"
 ROOT="/var/www/Aspire-Docs"
 RELEASE_DIR="${ROOT}/releases/${VERSION}"
 CURRENT_LINK="${ROOT}/current"
-SITE_NAME="${SITE_NAME:-dev.docs.drixalerp.com}"
+SITE_NAME="${SITE_NAME:-docs.dev.drixalerp.com}"
 
 if [[ "$(id -u)" -ne 0 ]]; then
   sudo -n true

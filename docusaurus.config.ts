@@ -7,7 +7,7 @@ const config: Config = {
   tagline: 'Unified cloud ERP documentation',
   favicon: 'img/favicon.ico',
 
-  url: 'https://dev.docs.drixalerp.com',
+  url: 'https://docs.dev.drixalerp.com',
   baseUrl: '/',
 
   organizationName: 'drixal',
